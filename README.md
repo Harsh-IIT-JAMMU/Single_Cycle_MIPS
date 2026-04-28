@@ -2,81 +2,102 @@
 
 ## 📌 Overview
 This project implements a **Single-Cycle MIPS Processor** using Verilog HDL.  
-The processor executes instructions in a single clock cycle and supports core MIPS functionalities including arithmetic operations, memory access, branching, and jump instructions.
-
----
-
-## ⚙️ Features
-- R-type Instructions: `add`, `sub`, `and`, `or`, `slt`
-- I-type Instructions: `lw`, `sw`, `addi`, `beq`
-- J-type Instruction: `jump`
-- 32-bit datapath
-- Register File with 32 registers
-- Instruction and Data Memory support
-- Control Unit with ALU control logic
+The processor executes each instruction in a single clock cycle and supports arithmetic, memory, branch, and jump operations.
 
 ---
 
 ## 🧠 Architecture
-The processor consists of the following components:
+
+### 🔷 Datapath Schematic
+![MIPS Datapath](schematic_page-0001.jpg)
+
+### 🔷 Components
 - Program Counter (PC)
 - Instruction Memory
-- Register File
+- Register File (32 registers)
 - ALU (Arithmetic Logic Unit)
 - Data Memory
 - Control Unit
-- Sign Extension and Multiplexers
+- Sign Extension & Multiplexers
+
+---
+
+## ⚙️ Features
+- **R-type Instructions:** `add`, `sub`, `and`, `or`, `slt`
+- **I-type Instructions:** `lw`, `sw`, `addi`, `beq`
+- **J-type Instruction:** `jump`
+- 32-bit datapath architecture
+- Separate instruction and data memory
+- Fully functional control unit and ALU control
 
 ---
 
 ## 🧪 Simulation
 - Simulated using **Xilinx Vivado**
-- Testbench verifies:
-  - Instruction execution
-  - ALU operations
-  - Memory read/write
-  - Branch and jump behavior
-# 📂 File Descriptions
+- Verified using testbench (`MIPS_tb.v`)
 
-## 🔷 Verilog Source Files
-
-### 📄 Single_Cycle_MIPS.v
-Top-level module implementing the complete single-cycle MIPS processor, integrating datapath and control logic.
-
-### 📄 Program_Counter.v
-Implements the program counter (PC) that updates the instruction address on each clock cycle.
-
-### 📄 Instruction_mem.v
-Read-only memory that stores instructions and provides them based on the current PC address.
-
-### 📄 Register_File.v
-Contains 32 registers supporting read and write operations for instruction execution.
-
-### 📄 Data_Mem.v
-Data memory module used for load (lw) and store (sw) operations during execution.
+### ✔ Verified Operations
+- Arithmetic operations (ADD, SUB, AND, OR, SLT)
+- Memory access (LW, SW)
+- Control flow (BEQ, JUMP)
+- PC update and branching behavior
 
 ---
 
-## 🔷 Testbench Files
+---
 
-### 📄 MIPS_tb.v
-Testbench for simulating the full MIPS processor, including memory initialization and instruction execution.
+## 📄 File Descriptions
+
+### 🔷 Verilog Source Files
+
+- **Single_Cycle_MIPS.v**  
+  Top-level module integrating datapath and control logic.
+
+- **Program_Counter.v**  
+  Updates instruction address on each clock cycle.
+
+- **Instruction_mem.v**  
+  Stores instructions and provides them based on PC.
+
+- **Register_File.v**  
+  Implements 32 registers with read/write capability.
+
+- **Data_Mem.v**  
+  Handles memory read/write for `lw` and `sw`.
 
 ---
 
-## 🔷 Memory Files
+### 🔷 Testbench
 
-### 📄 Instruction_Mem.mem
-Contains machine code instructions executed by the MIPS processor during simulation.
+- **MIPS_tb.v**  
+  Simulates full processor execution and initializes memory.
 
-### 📄 Register_File.mem
-Initializes register values before simulation to ensure predictable execution.
-
-### 📄 Data_Mem.mem
-Initializes data memory values used in load and store operations.
-
-### 📄 truth_table.mem
-Default instruction memory initialization file (overridden during simulation by testbench).
 ---
 
-## 📂 Project Structure
+### 🔷 Memory Files
+
+- **Instruction_Mem.mem**  
+  Contains machine code instructions executed by processor.
+
+- **Register_File.mem**  
+  Initializes register values before simulation.
+
+- **Data_Mem.mem**  
+  Provides initial data for memory operations.
+
+- **truth_table.mem**  
+  Default instruction memory (overridden during simulation).
+
+---
+
+
+## 🎯 Learning Outcomes
+- Understanding of MIPS architecture  
+- Datapath and control unit design  
+- Verilog-based processor implementation  
+- Simulation and debugging in Vivado  
+
+---
+
+## 👨‍💻 Author
+Harsh Kumar
