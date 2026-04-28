@@ -9,7 +9,7 @@ The processor executes each instruction in a single clock cycle and supports ari
 ## 🧠 Architecture
 
 ### 🔷 Datapath Schematic
-![MIPS Datapath](schematic_page-0001.jpg)
+![MIPS Datapath](schematic_page-0001.JPG)
 
 ### 🔷 Components
 - Program Counter (PC)
