@@ -81,17 +81,19 @@ Each hexadecimal digit = **4 binary bits**
 
 ### 🔹 Instruction: `02328020`
 
-### Step 1: Convert Hex → Binary
+### 🔹 Step 1: Convert Hex → Binary
 
-0 2 3 2 8 0 2 0
-0000 0010 0011 0010 1000 0000 0010 0000
+| Hex | 0 | 2 | 3 | 2 | 8 | 0 | 2 | 0 |
+|-----|---|---|---|---|---|---|---|---|
+| Bin | 0000 | 0010 | 0011 | 0010 | 1000 | 0000 | 0010 | 0000 |
 
+---
 
-### Step 2: Split into fields
+### 🔹 Step 2: Split into Fields
 
-000000 | 10001 | 10010 | 10000 | 00000 | 100000
-opcode rs rt rd shamt funct
-
+| opcode | rs    | rt    | rd    | shamt | funct  |
+|--------|-------|-------|-------|-------|--------|
+| 000000 | 10001 | 10010 | 10000 | 00000 | 100000 |
 
 ### Step 3: Decode
 - opcode = `000000` → R-type  
