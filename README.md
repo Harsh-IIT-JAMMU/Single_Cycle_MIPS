@@ -44,6 +44,16 @@ The processor executes each instruction in a single clock cycle and supports ari
 
 ---
 
+### 📊 Waveform Output
+![Waveform](Simulation.png)
+
+---
+
+### 🖥️ Console Output
+![TCL Output](Output.png)
+
+---
+
 ---
 
 ## 📄 File Descriptions
