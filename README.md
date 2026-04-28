@@ -1,8 +1,7 @@
 # 🖥️ Single Cycle MIPS Processor (Verilog)
 
 ## 📌 Overview
-This project implements a **Single-Cycle MIPS Processor** using Verilog HDL.  
-The processor executes each instruction in a single clock cycle and supports arithmetic, memory, branch, and jump operations.
+This project implements a **Single-Cycle MIPS Processor** using Verilog HDL. MIPS stands for Microprocessor without Interlocked Pipeline Stages, a RISC-based architecture designed to execute without pipeline interlocks for simplicity and high performance. The processor executes each instruction in a single clock cycle and supports arithmetic, memory, branch, and jump operations.
 
 ---
 
